@@ -1,0 +1,16 @@
+<script>
+  function getWeekDay(year, month, day) {
+    var names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var d = new Date(year, month, day);
+    var date = d.getDay();
+    return names[date];
+  }
+
+  var year = prompt("Masukan Tahun Lahir Kamu...");
+  var month = prompt("Masukan Bulan Lahir Kamu...") - 1;
+  var day = prompt("Masukan Tanggal Lahir Kamu...");
+
+  alert(getWeekDay(year, month, day));
+  console.log(getWeekDay(year, month, day));
+</script>
+Footer © 2022 GitHub, Inc. Footer navigation Terms Privacy Securit

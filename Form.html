@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Form</legend>
+    <p>
+      <label>Nama</label>
+      <input type="text" name="nama" id="nama">
+    </p>
+
+    <p>
+      <label>Kelas</label>
+      <input type="text" name="kelas" id="kelas">
+    </p>
+
+    <p>
+      <label>Password</label>
+      <input type="password" name="password" id="password">
+    </p>
+
+    <p>
+      <label>Tanggal Lahir</label>
+      <input type="date" name="Tanggal Lahir" id="tgl">
+    </p>
+
+    <p>
+      <input type="submit" name="submit" value="Kirim" />
+  </p>
+  </fieldset>
+    </form>
+    <script>
+      function validate() {
+  var nama = document.getElementById("nama");
+  var kelas = document.getElementById("kelas");
+  var password = document.getElementById("password");
+  var tgl = document.getElementById("tgl");
+  if (nama.value != '' && kelas.value != '' && password.value != '' && tgl.value != '') {
+    if (n1.value == n2.value) {
+      return true;
+    }
+  }
+  alert("Please fill the blank column");
+  return false;
+}
+    </script>
+  </body>
+</html>

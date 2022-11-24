@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hitunglah!</title>
+  </head>
+  <body>
+    <script>
+      <button id="demo">Count</button>;
+      // calling the function in window.onload to make sure the HTML is loaded
+      window.onload = function () {
+        var btn = document.getElementById("demo");
+        btn.addEventListener("click", myFunction);
+
+        function myFunction() {
+          alert("Luas Persegi Panjang");
+          var panjang = prompt("Insert Length");
+          var lebar = prompt("Insert Width");
+          var hasil = alert(panjang * lebar);
+          btn.removeEventListener("click", myFunction);
+          return hasil;
+        }
+      };
+    </script>
+  </body>
+</html>

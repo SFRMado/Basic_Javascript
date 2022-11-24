@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        cursor: pointer;
+      }
+      .gambar {
+        height: 450px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img class="gambar" id="slider" src="images/18002.jpg" alt="Tree" /><br />
+      <button onclick="Before()"><</button>
+      <span onclick="ClickOn(0)">1</span>
+      <span onclick="ClickOn(1)">2</span>
+      <span onclick="ClickOn(2)">3</span>
+      <span onclick="ClickOn(3)">4</span>
+      <span onclick="ClickOn(4)">5</span>
+      <span onclick="ClickOn(5)">6</span>
+      <span onclick="ClickOn(6)">7</span>
+      <span onclick="ClickOn(7)">8</span>
+      <span onclick="ClickOn(8)">9</span>
+      <span onclick="ClickOn(9)">10</span>
+      <button onclick="After()">></button>
+    </div>
+
+    <script>
+      var images = ["images/18002.jpg", "images/34254.png", "images/68370.jpg", "images/93368.jpg", "images/101846.jpg", "images/105131.jpg", "images/113596.jpg", "images/176236.jpg", "images/354058.jpg", "images/398596.jpg"];
+
+      var num = 0;
+      function ClickOn(params) {
+        console.log(params);
+        var slider = document.getElementById("slider");
+        event.preventDefault;
+        return (slider.src = images[params]);
+      }
+      function After() {
+        var slider = document.getElementById("slider");
+        num++;
+        if (num >= images.length) {
+          num = 0;
+        }
+        slider.src = images[num];
+      }
+      function Before() {
+        var slider = document.getElementById("slider");
+        num--;
+        if (num < 0) {
+          num = images.length - 1;
+        }
+        slider.src = images[num];
+      }
+    </script>
+  </body>
+</html>
